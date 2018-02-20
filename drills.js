@@ -12,9 +12,9 @@
 
 // console.log(max([5, 10, 2, 14, 15]));
 
-
+/*
 function min(numbers) {
-    let i = 0; 
+    let i = 0;
     let currentMin = numbers[0];
     while (i < numbers.length) {
         if (currentMin > numbers[i]) {
@@ -25,4 +25,13 @@ function min(numbers) {
     return currentMin;
 }
 
-console.log(min([3, 5, 7, 9, 12]));
+console.log(min([3, 5, 7, 9, 12])); */
+
+function average(numbers) {
+  var sum = 0;
+  numbers.forEach(function(i){
+    sum = sum + i;
+  })
+  return sum / numbers.length
+}
+console.log(average([3, 5, 7, 9, 12]));
