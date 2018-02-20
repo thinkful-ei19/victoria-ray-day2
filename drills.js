@@ -103,14 +103,31 @@ console.log(min([3, 5, 7, 9, 12])); */
 //
 // robotWarning('Seattle Ave and London Blvd');
 
-function turtleSteps(arr){
-  arr.filter(function(steps) {
-    return steps[0] >= 0 && steps[1] >= 0
-  }).map(function(val) {
-    return val[0] + val[1]
-  }).forEach(function(val) {
-    console.log(`Steps Taken: ${val}`)
-  })
-  }
 
-console.log(turtleSteps([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]))
+// function turtleSteps(arr){
+//   arr.filter(function(steps) {
+//     return steps[0] >= 0 && steps[1] >= 0
+//   }).map(function(val) {
+//     return val[0] + val[1]
+//   }).forEach(function(val) {
+//     console.log(`Steps Taken: ${val}`)
+//   })
+//   }
+
+// console.log(turtleSteps([[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]]))
+
+
+let string = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+let arr = string.split(' ');
+
+const message = function(accumulator, currentValue) {
+  if(currentValue.length === 3) {
+    return accumulator + ' ';
+  } else {
+    return accumulator + currentValue[currentValue.length - 1].toUpperCase();
+  }
+}
+
+// console.log(array1.reduce(reducer));
+
+console.log(arr.reduce(message));
