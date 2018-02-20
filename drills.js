@@ -27,11 +27,30 @@ function min(numbers) {
 
 console.log(min([3, 5, 7, 9, 12])); */
 
-function average(numbers) {
-  var sum = 0;
-  numbers.forEach(function(i){
-    sum = sum + i;
-  })
-  return sum / numbers.length
+// function average(numbers) {
+//   var sum = 0;
+//   numbers.forEach(function(i){
+//     sum = sum + i;
+//   })
+//   return sum / numbers.length
+// }
+// console.log(average([3, 5, 7, 9, 12]));
+
+
+
+function repeat(fn, n) {
+   for (let i = 0; i < n; i++) {
+       fn();
+   }
+} 
+
+function hello() {
+    console.log('Hello world');
 }
-console.log(average([3, 5, 7, 9, 12]));
+
+function goodbye() {
+    console.log('Goodbye world');
+}
+
+repeat(hello, 5);
+repeat(goodbye, 5);
