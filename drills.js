@@ -38,19 +38,41 @@ console.log(min([3, 5, 7, 9, 12])); */
 
 
 
-function repeat(fn, n) {
-   for (let i = 0; i < n; i++) {
-       fn();
-   }
-} 
+// function repeat(fn, n) {
+//    for (let i = 0; i < n; i++) {
+//        fn();
+//    }
+// }
+//
+// function hello() {
+//     console.log('Hello world');
+// }
+//
+// function goodbye() {
+//     console.log('Goodbye world');
+// }
+//
+// repeat(hello, 5);
+// repeat(goodbye, 5);
 
-function hello() {
-    console.log('Hello world');
+
+
+// Return only names that begin with 'R'
+const myNames = ['Rich', 'Joe', 'Bhaumik', 'Ray'];
+
+const filteredNames = filter(myNames, function(name) {
+    // This is a "predicate function" - it's a function that only returns a boolean
+    return name[0] === 'R';
+});
+
+console.log(filteredNames) // => ['Rich', 'Ray']
+
+function filter(arr, fn) {
+  var newArray = [];
+  for (var i = 0; i < arr.length; i++){
+    if (fn(arr[i]) === true){
+      newArray.push(arr[i]);
+    }
+  }
+  return newArray;
 }
-
-function goodbye() {
-    console.log('Goodbye world');
-}
-
-repeat(hello, 5);
-repeat(goodbye, 5);
