@@ -1,24 +1,28 @@
-// function max(num) {
-//     return num.reduce((highest, i) => {
-//         if (i > highest) {
-//             return i;
+// function max(numbers) {
+//     let i = 0;
+//     let currentMax = numbers[0];
+//     while (i < numbers.length) {
+//         if (currentMax < numbers[i]) {
+//             currentMax = numbers[i];
 //         }
-//     },0);
-
+//         i++;
+//     }
+//     return currentMax;
 // }
 
-// console.log(max([5, 10, 2, 13, 15]));
+// console.log(max([5, 10, 2, 14, 15]));
 
-function max(numbers) {
-    let i = 0;
-    let currentMax = numbers[0];
+
+function min(numbers) {
+    let i = 0; 
+    let currentMin = numbers[0];
     while (i < numbers.length) {
-        if (currentMax < numbers[i]) {
-            currentMax = numbers[i];
+        if (currentMin > numbers[i]) {
+            currentMin = numbers[i];
         }
         i++;
     }
-    return currentMax;
+    return currentMin;
 }
 
-console.log(max([5, 10, 2, 14, 15]));
+console.log(min([3, 5, 7, 9, 12]));
